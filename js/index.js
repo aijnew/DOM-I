@@ -40,3 +40,65 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav = document.getElementsByTagName('a');
+nav[0].innerHTML = "Services";
+nav[1].innerHTML = "Product";
+nav[2].innerHTML = "Vision";
+nav[3].innerHTML = "Features";
+nav[4].innerHTML = "About";
+nav[5].innerHTML = "Contact";
+
+document.querySelector('h1').innerHTML = "DOM Is Awesome";
+document.querySelector('button').innerHTML = "Get Started";
+document.getElementById('cta-img').setAttribute('src', siteContent["cta"]["img-src"]);
+
+let title = document.getElementsByTagName('h4');
+let content = document.getElementsByTagName('p');
+
+title[0].innerHTML = siteContent['main-content']['features-h4'];
+content[0].innerHTML = siteContent['main-content']['features-content'];
+
+title[1].innerHTML = siteContent['main-content']['about-h4'];
+content[1].innerHTML = siteContent['main-content']['about-content'];
+
+document.getElementById('middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+title[2].innerHTML = siteContent['main-content']['services-h4'];
+content[2].innerHTML = siteContent['main-content']['services-content'];
+
+title[3].innerHTML = siteContent['main-content']['product-h4'];
+content[3].innerHTML = siteContent['main-content']['product-content'];
+
+title[4].innerHTML = siteContent['main-content']['vision-h4'];
+content[4].innerHTML = siteContent['main-content']['vision-content'];
+
+title[5].innerHTML = siteContent['contact']['contact-h4'];
+content[5].innerHTML = siteContent['contact']['address'];
+
+content[6].innerHTML = siteContent['contact']['phone'];
+content[7].innerHTML = siteContent['contact']['email'];
+content[8].innerHTML = siteContent['footer']['copyright'];
+
+for( let i = 0; i < nav.length; i++){
+  nav[i].style.color = 'green';
+};
+
+const firstElement = document.createElement('a');
+firstElement.textContent = "Me";
+
+const navigation = document.querySelector('nav');
+navigation.prepend(firstElement);
+firstElement.style.color = 'green';
+
+
+
+const anotherElement = document.createElement('a');
+anotherElement.textContent = 'Blah';
+navigation.append(anotherElement);
+anotherElement.style.color = 'blue';
+
+
+
+
+
